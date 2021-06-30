@@ -1,8 +1,38 @@
-.pokemonInfo {
- 
-  text-align: center;
+body {
+  background-color: rgb(135, 206, 235);
 }
 
+.pokemonInfo {
+  text-align: center;
+  height: 50%;
+  width: 50%;
+
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4.5px);
+  -webkit-backdrop-filter: blur(4.5px);
+  border-radius: 10px;
+}
+.pokemonInfo img {
+  height: 300px;
+  object-fit: cover;
+}
+
+.pokemonInfo span {
+}
 h1 {
-  background-color: red;
+  width: 50%;
+  color: white;
+}
+
+.span {
+  margin-bottom: 50px;
+}
+
+button {
+  padding: 10px;
+}
+
+.pokemon-list-container {
+  width: 50%;
 }

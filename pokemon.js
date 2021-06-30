@@ -30,13 +30,23 @@ function getPokemonInfo(url) {
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
+      document.querySelector(".pokemonInfo").innerHTML = ``;
       document.querySelector(
         ".pokemonInfo"
       ).innerHTML = `<img src="${data.sprites.front_default}"> `;
-      //document.querySelector(".pokemonInfo").innerHTML = ``;
+
+      document.querySelector(".pokemonInfo").innerHTML += `<br><span> ${
+        " Weight: " + data.weight + " kg" + ""
+      } </span>`;
 
       document.querySelector(
         ".pokemonInfo"
-      ).innerHTML += `<br><span> ${data.name} </span>`;
+      ).innerHTML += `<br><span class = "span"> ${
+        "Height: " + data.height + " m"
+      } </span>`;
+
+      document.querySelector(".pokemonInfo").innerHTML += `<br><span> ${
+        "Type: " + data.types[0].type.name
+      } </span>`;
     });
 }
