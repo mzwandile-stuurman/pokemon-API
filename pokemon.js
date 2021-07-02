@@ -16,8 +16,13 @@ function getPokemonList(url) {
         ).innerHTML += `<button onclick = "getPokemonInfo('${btn.url}')">${btn.name}
   </button>`;
       });
-      container.innerHTML += `<br><br><button onclick="getPokemonList('${data.next}')">Next</button>`;
-      container.innerHTML += `<br><br><button onclick="getPokemonList('${data.previous}')">Previous</button>`;
+      document.querySelector(".navigate").innerHTML = ``;
+      document.querySelector(
+        ".navigate"
+      ).innerHTML += `<br><br><button onclick="getPokemonList('${data.next}')">Next-List</button>`;
+      document.querySelector(
+        ".navigate"
+      ).innerHTML += `<br><br><button onclick="getPokemonList('${data.previous}')">Previous-List</button>`;
       container.innerHTML += ``;
     });
 }
