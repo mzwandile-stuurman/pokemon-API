@@ -33,7 +33,13 @@ function getPokemonInfo(url) {
       document.querySelector(".pokemonInfo").innerHTML = ``;
       document.querySelector(
         ".pokemonInfo"
-      ).innerHTML = `<img src="${data.sprites.front_default}"> `;
+      ).innerHTML = `<img src="${data.sprites.other.dream_world.front_default}"> `;
+
+      document.querySelector(
+        ".pokemonInfo"
+      ).innerHTML += `<br><span class = "span"> ${
+        "Name: " + data.name
+      } </span>`;
 
       document.querySelector(".pokemonInfo").innerHTML += `<br><span> ${
         " Weight: " + data.weight + " kg" + ""
